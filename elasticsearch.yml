@@ -1,0 +1,25 @@
+# ======================== Elasticsearch Configuration =========================
+
+# Cluster settings:
+# Use a descriptive name for your cluster:
+# cluster.name: my-application
+
+# Node settings:
+# Use a descriptive name for the node:
+node.name: node-1
+
+# Path to store the data and logs
+path.data: /var/lib/elasticsearch
+path.logs: /var/log/elasticsearch
+
+# Network settings:
+# Expose Elasticsearch on all network interfaces (0.0.0.0) to be accessible outside the container
+network.host: 0.0.0.0
+http.port: 9200
+
+# Discovery settings for a single-node setup
+discovery.seed_hosts: ["localhost"]
+cluster.initial_master_nodes: ["node-1"]
+# Optional security settings
+# Security features are not enabled by default. If you want to enable them later, refer to the Elasticsearch documentation
+# action.destructive_requires_name: true

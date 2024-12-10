@@ -1,0 +1,4 @@
+server.port: 5601
+server.host: "0.0.0.0" # Bind to all interfaces to allow external access
+elasticsearch.hosts: ["http://localhost:9200"] # Assuming Elasticsearch is running on localhost within the container
+logging.verbose: true # Optional: Enable verbose logging for debugging
