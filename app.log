@@ -1,9 +1,0 @@
-{"level":"info","message":"Book routes initialized.","timestamp":"2024-12-09T12:31:41.623Z"}
-{"level":"info","message":"GET / - Fetch all books requested.","timestamp":"2024-12-09T12:32:03.576Z"}
-{"count":3,"level":"info","message":"Fetched all books","timestamp":"2024-12-09T12:32:03.609Z"}
-{"level":"info","message":"GET / - Fetch all books requested.","timestamp":"2024-12-09T12:59:12.429Z"}
-{"count":3,"level":"info","message":"Fetched all books","timestamp":"2024-12-09T12:59:12.448Z"}
-{"level":"info","message":"GET / - Fetch all books requested.","timestamp":"2024-12-09T12:59:17.740Z"}
-{"count":3,"level":"info","message":"Fetched all books","timestamp":"2024-12-09T12:59:17.776Z"}
-{"level":"info","message":"GET / - Fetch all books requested.","timestamp":"2024-12-09T13:00:13.518Z"}
-{"count":3,"level":"info","message":"Fetched all books","timestamp":"2024-12-09T13:00:13.540Z"}

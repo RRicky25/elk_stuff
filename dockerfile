@@ -28,10 +28,6 @@ RUN apt-get update \
 RUN apt-get update \
     && apt-get install -y kibana
 
-# Install Filebeat
-RUN apt-get update \
-    && apt-get install -y filebeat
-
 # Expose necessary ports
 EXPOSE 9200 5601 5044
 
@@ -46,9 +42,7 @@ RUN chmod -R 777 /usr/share/logstash/data
 # Copy configuration files (ensure these files exist in the same directory as the Dockerfile)
 COPY ./elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 COPY ./logstash.conf /etc/logstash/conf.d/
-COPY ./filebeat.yml /etc/filebeat/filebeat.yml
 COPY ./kibana.yml /etc/kibana/kibana.yml
-COPY ./app.log /logs/testingLogs/app.log
 
 # Set ownership and permissions for Kibana files and data directory
 RUN chown -R elasticsearch:elasticsearch /etc/kibana \
@@ -70,7 +64,6 @@ USER elasticsearch
 CMD /usr/share/elasticsearch/bin/elasticsearch -d && \
     /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/logstash.conf & \
     /usr/share/kibana/bin/kibana -c /etc/kibana/kibana.yml & \
-    # /usr/share/filebeat/bin/filebeat -e & \
     tail -f /dev/null
 
 # # Run Elasticsearch, Logstash, Kibana, and Filebeat in the foreground
