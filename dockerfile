@@ -51,7 +51,8 @@ RUN chown -R elasticsearch:elasticsearch /etc/kibana \
     && chown -R elasticsearch:elasticsearch /usr/share/kibana/data \
     && chmod -R 755 /usr/share/kibana/data
 
-RUN chmod -R 755 /logs/testingLogs
+
+RUN mkdir -p /logs/testingLogs && chmod -R 755 /logs/testingLogs
 
 
 ENV LOGSTASH_PATH_SETTINGS=/etc/logstash
